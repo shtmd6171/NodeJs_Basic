@@ -1,6 +1,13 @@
 // 해당 주석들은 웹 페이지의 주소부분인 queryString의 값이  id = synta 의 형태로 고치고
 // 웹사이트에 접속시에 다른 id 값을 가질 때 다른 화면을 보여주게 도와주는 내용을 다루고 있다.
 
+// + ) 이 Js파일 내부에서는 main.js와는 달리 fileread를 통해 원시파일을 불러
+// <title>과 <h2>뿐만 아니라 본문의 <p></p> 사이의 내용 또한
+// 각 id 마다 다르게 설정하는 방법을 설명하고 있다.
+
+// 추가된 내용에는 '+ )'를 달아두었다.
+// main3.js 에서는 24 - 33 번 줄을 삭제 , 34 줄의 위치를 62번으로 옮김
+
 var http = require('http');
 var fs = require('fs');
 // require('url')를 통해서 url과 관련된 모듈(메소드)을 사용하게 한다.
@@ -9,7 +16,6 @@ var app = http.createServer(function(request,response){
 
     // request.url은 url의 path뒤 queryString의 값이다. 아무것도 없을 때는 '/'
     var _url = request.url;
-    console.log(_url);
 
     // url.parse(syntax)를 통해 queryString인 syntax의 url를 분석하는데
     // 해당 url의 오브젝트의 값이 quertData에 전송된다 {id : html}
@@ -26,6 +32,7 @@ var app = http.createServer(function(request,response){
       return;
     }
     response.writeHead(200);
+    // + )
     // data 디렉터리 밑의 queryData.id의 값인  HTML, CSS, JavaScript 의 파일명을 불러온다.
     // data 폴더가 다른 경로에 있을 경우 절대경로로 지정해줘야 한다.
     // data 파일 밑의 내용은 <p></p> 안에 들어갈 본문 내용만 들어있는 것으로
