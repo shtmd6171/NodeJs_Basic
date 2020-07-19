@@ -1,4 +1,6 @@
-
+//pm2를 설치해서 무중단 서비스를 진행 할 수 있다.
+// npm install pm2 -g
+//pm start action.js를 통해 열람 가능하다.
 var http = require('http');
 var fs = require('fs');
 var url = require('url');
@@ -8,7 +10,7 @@ function TemplateHTML (title,list,body) {
   <!doctype html>
   <html>
   <head>
-    <title>WEB1 - ${title}</title>
+    <title>WEB - ${title}</title>
     <meta charset="utf-8">
   </head>
   <body>
