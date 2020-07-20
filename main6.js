@@ -1,12 +1,14 @@
+// main5.js ) pm2를 설치해서 무중단 서비스를 진행 할 수 있다.
+// npm install pm2 -g
+//pm start action.js를 통해 열람 가능하다.
+
 // main5.js ) 이 Js파일 내부에서는 main4.js와는 달리 함수를 사용해 코드를 줄였다.
 // 추가적으로 pm2와 관련한 주석이 포함되어 있으며
 // create 라는 페이지를 따로 만들어 정보를 저장하는 방법을 설명하고 있다.
 
-// + )
+// + ) 이 Js파일 내부에서는 main5.js와는 달리
+//  update 웹 페이지를 구현하는 방법에 대해 설명하고 있다.
 
-// main5.js ) pm2를 설치해서 무중단 서비스를 진행 할 수 있다.
-// npm install pm2 -g
-//pm start action.js를 통해 열람 가능하다.
 var http = require('http');
 var fs = require('fs');
 var url = require('url');
@@ -142,7 +144,7 @@ var app = http.createServer(function(request,response){
          response.end(template);
          });
        });
-       // update를 통해 submit 진행시 update_process 페이지로 이동한다.
+       // + ) update를 통해 submit 진행시 update_process 페이지로 이동한다.
        // 이동 한 뒤에 id title data를 얻어와 파일 이름과 내용을 변경하고
        // 업데이트 했던 페이지로 리다이렉션한다.
      } else if(queryPath === '/update_process'){
