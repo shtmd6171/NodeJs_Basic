@@ -20,6 +20,6 @@
   },
   "homepage": "https://github.com/shtmd6171/NodeJs_TEST#readme",
   "dependencies": {
-    "sanitize-html": "^1.27.1"
+    "sanitize-html": "^2.3.2"
   }
 }
